@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -15, y: 15}
+  m_AnchoredPosition: {x: 18, y: -18}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1995055859924852280
@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 5821158243000550739}
   - component: {fileID: 5902058718332728293}
   - component: {fileID: 5954884118762795156}
+  - component: {fileID: 5982592168938312651}
   m_Layer: 5
   m_Name: UISlot
   m_TagString: Untagged
@@ -152,6 +153,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5982592168938312651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696507547263602388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb74651fc0ef0346b06d7a4e5bc908b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemIcon: {fileID: 4757527432269703671}
+  equipMark: {fileID: 1455108747765891535}
 --- !u!1 &5916193733014568039
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3820755, g: 0.4915112, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
