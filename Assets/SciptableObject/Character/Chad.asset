@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad6e9f0697e6a7c45b374516b263f983, type: 3}
+  m_Name: Chad
+  m_EditorClassIdentifier: 
+  characterId: Chad
+  description: "\uCF54\uB529\uC758 \uB178\uC608\uAC00 \uB41C \uC9C0 10\uAC1C\uC6D4\uC9F8..."
+  level: 10
+  currentHP: 9
+  maxHP: 12
+  attack: 35
+  defense: 40
+  hp: 100
+  critRate: 25
+  currentExp: 30
+  maxExp: 100
+  InventoryItems:
+  - {fileID: 11400000, guid: 0d9a1b69a4059ea47bcfbec38c311418, type: 2}
+  - {fileID: 11400000, guid: 80450fdef76ca1d40a1e2ed6957dc01e, type: 2}
+  - {fileID: 11400000, guid: 921d9a4089f7a7d42a4eee7bf8614f2c, type: 2}
+  - {fileID: 11400000, guid: 482e3ab8015e8634e9b0d9ff25322047, type: 2}

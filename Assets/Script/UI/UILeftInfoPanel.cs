@@ -16,7 +16,6 @@ public class UILeftInfoPanel : MonoBehaviour
     {
         nameText.text = character.ID;
         levelText.text = $"Lv {character.Level}";
-        hpText.text = $"{character.CurrentHP} / {character.MaxHP}";
         descriptionText.text = character.Description;
 
         expSlider.value = (float)character.CurrentExp / character.MaxExp;

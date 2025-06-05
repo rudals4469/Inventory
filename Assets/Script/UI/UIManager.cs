@@ -42,5 +42,7 @@ public class UIManager : MonoBehaviour
         mainMenuUI.gameObject.SetActive(false);
         statusUI.gameObject.SetActive(false);
         inventoryUI.gameObject.SetActive(true);
+        
+        inventoryUI.SetData(GameManager.Instance.Player);
     }
 }
