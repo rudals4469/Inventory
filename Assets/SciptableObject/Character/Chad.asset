@@ -21,8 +21,8 @@ MonoBehaviour:
   defense: 40
   hp: 100
   critRate: 25
-  currentExp: 30
-  maxExp: 100
+  currentExp: 9
+  maxExp: 12
   InventoryItems:
   - {fileID: 11400000, guid: 0d9a1b69a4059ea47bcfbec38c311418, type: 2}
   - {fileID: 11400000, guid: 80450fdef76ca1d40a1e2ed6957dc01e, type: 2}
