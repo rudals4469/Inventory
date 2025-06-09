@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class UIInventory : MonoBehaviour
@@ -11,23 +11,25 @@ public class UIInventory : MonoBehaviour
     [SerializeField] private Button backButton;
 
     private List<UISlot> _slotList = new List<UISlot>();
-    private const int MaxSlotCount = 120;
+
+    private int _maxSlotCount = Character.MaxInventorySize;
 
     public void SetData(Character character)
     {
         if (_slotList.Count == 0)
         {
-            for (int i = 0; i < MaxSlotCount; i++)
+            for (int i = 0; i < _maxSlotCount; i++)
             {
                 GameObject go = Instantiate(slotPrefab, slotParent);
                 UISlot slot = go.GetComponent<UISlot>();
+                slot.SetIndex(i);
                 _slotList.Add(slot);
             }
         }
 
         for (int i = 0; i < _slotList.Count; i++)
         {
-            if (i < character.Inventory.Count)
+            if (i < character.Inventory.Count && character.Inventory[i] != null)
             {
                 _slotList[i].SetItem(character.Inventory[i], character.Inventory[i].IsEquipped);
             }
@@ -37,7 +39,7 @@ public class UIInventory : MonoBehaviour
             }
         }
 
-        titleText.text = $"Inventory {character.Inventory.Count} / {MaxSlotCount}";
+        titleText.text = $"Inventory {character.Inventory.Count} / {_maxSlotCount}";
     }
 
     private void Start()

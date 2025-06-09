@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3557dc7b53afe2f4e88012d6db20df79, type: 3}
   m_Name: crystal sword
   m_EditorClassIdentifier: 
-  itemName: "\uC218\uC815\uAC80"
-  icon: {fileID: 21300000, guid: bb1cc8b1401875b4aa200b27f3162ac8, type: 3}
+  itemName: "\uB3C4\uB07C"
+  icon: {fileID: 21300000, guid: b871e650623efe14c9dc5acdcbc27754, type: 3}
   slot: 0
   bonusAtk: 5
   bonusDef: 0

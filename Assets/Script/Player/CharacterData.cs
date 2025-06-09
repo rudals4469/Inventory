@@ -17,5 +17,5 @@ public class CharacterData : ScriptableObject
     public int currentExp;
     public int maxExp;
 
-    public ItemData[] InventoryItems;
+    public ItemData[] inventoryItems;
 }

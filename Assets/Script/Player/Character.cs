@@ -2,6 +2,7 @@ using System.Collections.Generic;
 
 public class Character
 {
+    public static readonly int MaxInventorySize = 120;
     public string ID { get; private set; }
     public int Level { get; private set; }
     public int CurrentHP { get; private set; }
@@ -18,7 +19,8 @@ public class Character
 
     public List<Item> Inventory { get; private set; } = new();
     public Dictionary<EquipSlot, Item> EquippedItems { get; private set; } = new();
-
+    
+    
     // public Character(string id, int level, int curHp, int maxHp, string desc, int atk, int def, int hp, int critRate, int curExp, int maxExp)
     // {
     //     ID = id;
@@ -51,15 +53,15 @@ public class Character
         CurrentExp = data.currentExp;
         MaxExp = data.maxExp;
 
-        Inventory = new List<Item>();
+        Inventory = new List<Item>(new Item[MaxInventorySize]);
         EquippedItems = new Dictionary<EquipSlot, Item>();
 
-        if (data.InventoryItems != null)
+        if (data.inventoryItems != null)
         {
-            foreach (var itemData in data.InventoryItems)
+            for (int i = 0; i < data.inventoryItems.Length && i < MaxInventorySize; i++)
             {
-                if (itemData != null)
-                    Inventory.Add(new Item(itemData));
+                if (data.inventoryItems[i] != null)
+                    Inventory[i] = new Item(data.inventoryItems[i]);
             }
         }
     }
