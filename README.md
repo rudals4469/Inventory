@@ -98,7 +98,7 @@ UIMainMenu에서는 버튼 클릭 시 UIManager의 전환 메서드를 호출하
 
 각 버튼은 Start() 메서드에서 AddListener()를 통해 이벤트에 등록됩니다.
 
-![전환](https://github.com/user-attachments/assets/93bb8cd2-ada7-4f75-8ab2-38e3f78498de)
+![전환](https://github.com/user-attachments/assets/21a8fdec-ab73-4099-9f21-b1c632c52881)
 
 ```csharp
 // UIManager.cs
