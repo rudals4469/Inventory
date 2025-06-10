@@ -20,6 +20,18 @@ public class Character
     public List<Item> Inventory { get; private set; } = new();
     public Dictionary<EquipSlot, Item> EquippedItems { get; private set; } = new();
     
+    public int CurrentInventoryCount
+    {
+        get
+        {
+            int count = 0;
+            foreach (var item in Inventory)
+                if (item != null)
+                    count++;
+            return count;
+        }
+    }
+    
     
     // public Character(string id, int level, int curHp, int maxHp, string desc, int atk, int def, int hp, int critRate, int curExp, int maxExp)
     // {

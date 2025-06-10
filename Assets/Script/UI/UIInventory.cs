@@ -10,9 +10,9 @@ public class UIInventory : MonoBehaviour
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private Button backButton;
 
-    private List<UISlot> _slotList = new List<UISlot>();
+    private readonly List<UISlot> _slotList = new List<UISlot>();
 
-    private int _maxSlotCount = Character.MaxInventorySize;
+    private readonly int _maxSlotCount = Character.MaxInventorySize;
 
     public void SetData(Character character)
     {
@@ -39,7 +39,7 @@ public class UIInventory : MonoBehaviour
             }
         }
 
-        titleText.text = $"Inventory {character.Inventory.Count} / {_maxSlotCount}";
+        titleText.text = $"Inventory {character.CurrentInventoryCount} / {_maxSlotCount}";
     }
 
     private void Start()
