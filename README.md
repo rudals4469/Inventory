@@ -24,11 +24,11 @@ UI 구성부터 데이터 연동, 장비 시스템, 드래그 앤 드롭 기능�
 <details>
 <summary>열고 닫기</summary>
 
-UIMainMenu, UIStatus, UIInventory의 세 가지 주요 UI를 각각 Canvas 단위로 구성하였습니다.
+UIMainMenu, UIStatus, UIInventory, UIInfo의 네 가지 주요 UI를 각각 Canvas 단위로 구성하였습니다.
 
-각 UI에는 버튼, 텍스트, 이미지, 스크롤 뷰 등 필요한 UI 요소들을 배치하였으며,예시 스크린샷을 참고하여 시각적으로 완성도 있는 구성을 목표로 하였습니다. 
+각 UI에는 버튼, 텍스트, 이미지, 스크롤 뷰 등 필요한 UI 요소들을 배치하였으며, 예시 스크린샷을 참고하여 시각적으로 완성도 있는 구성을 목표로 하였습니다. 
 
-구성에 사용된 스프라이트는 임의로 준비한 이미지를 활용하였습니다.
+구성에 사용된 스프라이트는 예시 스크린샷을 활용하였습니다.
 
 ![메인메뉴](https://github.com/user-attachments/assets/ced160b1-7c70-4e44-92a2-fde0ff0c0033)
 ![스텟](https://github.com/user-attachments/assets/5e87e80a-3834-45bd-aee9-dd563f362c9d)
@@ -43,7 +43,7 @@ UIMainMenu, UIStatus, UIInventory의 세 가지 주요 UI를 각각 Canvas 단�
 <details>
 <summary>열고 닫기</summary>
 
-UI 기능을 제어하고 게임 데이터를 처리하기 위해 GameManager, UIManager, 각 UI에 대응하는 스크립트(UIMainMenu, UIStatus, UIInventory), 그리고 게임의 핵심 데이터 구조인 Character 클래스를 작성하였습니다. 
+UI 기능을 제어하고 게임 데이터를 처리하기 위해 GameManager, UIManager, 각 UI에 대응하는 스크립트(UIMainMenu, UIStatus, UIInventory, UILeftInfoPanel), 그리고 게임의 핵심 데이터 구조인 Character 클래스를 작성하였습니다. 
 
 UIManager는 각 UI를 SerializedField로 받아 내부적으로 제어하며, Character 클래스는 플레이어의 스탯, 인벤토리, 장착 아이템 등의 정보를 포함하도록 구성하였습니다.
 
@@ -65,6 +65,22 @@ public class GameManager : MonoBehaviour
     {
         Player = new Character(characterData);
         UIManager.Instance.InitAllUI(Player);
+    }
+}
+```
+```csharp
+public class UIManager : MonoBehaviour
+{
+    public static UIManager Instance { get; private set; }
+
+    [SerializeField] private UIMainMenu mainMenuUI;
+    [SerializeField] private UIStatus statusUI;
+    [SerializeField] private UIInventory inventoryUI;
+    [SerializeField] private UILeftInfoPanel leftInfoPanel;
+
+    private void Awake()
+    {
+        Instance = this;
     }
 }
 ```
@@ -228,8 +244,6 @@ private void ToggleEquip()
 장착된 아이템이 캐릭터의 스탯에 실시간으로 반영되도록 하기 위해, Character 클래스 내의 GetTotalAttack(), GetTotalDefense() 등의 메서드에서는 장착된 아이템의 보너스 스탯을 포함하여 최종 값을 반환합니다.
 
 해당 값은 UIStatus에서 UI에 표시되며, 아이템 장착 또는 해제 시 UI가 자동으로 갱신되어 변화를 즉시 확인할 수 있습니다.
-
-
 
 ```csharp
 // Character.cs
