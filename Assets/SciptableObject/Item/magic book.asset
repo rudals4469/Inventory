@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\uB9C8\uBC95\uCC45"
   icon: {fileID: 21300000, guid: f8ae0c2469f60524aafbf95c9aa27bb7, type: 3}
-  slot: 2
+  slot: 0
   bonusAtk: 0
   bonusDef: 0
   bonusHP: 0

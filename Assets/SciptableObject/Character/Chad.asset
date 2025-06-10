@@ -23,8 +23,11 @@ MonoBehaviour:
   critRate: 25
   currentExp: 9
   maxExp: 12
-  InventoryItems:
+  inventoryItems:
+  - {fileID: 11400000, guid: 6b2812add39c96543b8e28764fb950b6, type: 2}
   - {fileID: 11400000, guid: 0d9a1b69a4059ea47bcfbec38c311418, type: 2}
+  - {fileID: 11400000, guid: 00a54eff9967136418c309c9faa22203, type: 2}
   - {fileID: 11400000, guid: 80450fdef76ca1d40a1e2ed6957dc01e, type: 2}
   - {fileID: 11400000, guid: 921d9a4089f7a7d42a4eee7bf8614f2c, type: 2}
+  - {fileID: 11400000, guid: acb8af37323ef2142aa0d0e379460dab, type: 2}
   - {fileID: 11400000, guid: 482e3ab8015e8634e9b0d9ff25322047, type: 2}
